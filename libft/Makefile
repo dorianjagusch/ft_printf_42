@@ -6,7 +6,7 @@
 #    By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:27:30 by djagusch          #+#    #+#              #
-#    Updated: 2022/11/22 11:16:02 by djagusch         ###   ########.fr        #
+#    Updated: 2022/11/22 11:40:49 by djagusch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = cc
 
 CFLAGS = -Werror -Wall -Wextra
 
-NAME = ../libft.o
+NAME = libftprintf.a
 
 HEADER = libft.h
 
