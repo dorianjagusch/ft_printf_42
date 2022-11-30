@@ -16,8 +16,15 @@ int	ft_putptr_c(void *ptr)
 {
 	uintptr_t	add;
 	char		*hex_add;
+	int			length;
 
 	add = (uintptr_t) ptr;
+	if (!add)
+		return (return_null());
 	hex_add = ft_dec_hexstr(add);
-	return (ft_putstr_c(hex_add));
+	if (!hex_add)
+		return (return_null());
+	length = ft_putstr_c(hex_add);
+	free(hex_add);
+	return (length);
 }

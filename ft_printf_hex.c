@@ -11,25 +11,40 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 int	ft_puthexlo_c(int n)
 {
 	char	*hex;
+	int		length;
 
-	ft_putchar('0');
-	ft_putchar('x');
-	hex = ft_dec_hexstr(n);
-	ft_strlower(hex);
-	return (ft_putstr_c(hex) + 2);
+	if (!n)
+		length = write(1, (void *)'0', 1);
+	else 
+	{
+		hex = ft_dec_hexstr(n);
+		if (!hex)
+			return (return_null());
+		ft_strlower(hex);
+		length = ft_putstr_c(hex);
+		free(hex);
+	}
+	return (length);
 }
 
 int	ft_puthexup_c(int n)
 {
 	char	*hex;
+	int		length;
 
-	ft_putchar('0');
-	ft_putchar('X');
-	hex = ft_dec_hexstr(n);
-	return (ft_putstr_c(hex) + 2);
+	if (!n)
+		length = write(1, (void *)'0', 1);
+	else 
+	{
+		hex = ft_dec_hexstr(n);
+		if (!hex)
+			return (return_null());
+		length = ft_putstr_c(hex);
+		free(hex);
+	}
+	return (length);
 }

@@ -6,7 +6,7 @@
 #    By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 15:27:30 by djagusch          #+#    #+#              #
-#    Updated: 2022/11/22 11:40:49 by djagusch         ###   ########.fr        #
+#    Updated: 2022/11/30 15:33:33 by djagusch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC = cc
 
 CFLAGS = -Werror -Wall -Wextra
 
-NAME = libftprintf.a
+NAME = libft.a
 
 HEADER = libft.h
 
@@ -30,21 +30,21 @@ FILES = ft_atoi ft_bzero ft_calloc ft_isalnum \
 	ft_lstadd_back ft_lstadd_front ft_lstclear \
 	ft_lstdelone ft_lstiter ft_lstlast ft_lstmap \
 	ft_lstnew ft_lstsize ft_min ft_max ft_putchar \
-	ft_putendl ft_putnbr ft_putstr ft_dectobase_str \
+	ft_putendl ft_putnbr ft_putstr ft_dectobase_str\
 
 SRCS = $(addsuffix .c,$(FILES))
 
 all: $(NAME)
 
 $(NAME): $(SRCS) $(SRCS:.c=.o)
-	$(CC) -c $(SRCS) $(CFLAGS) -I $(HEADER)
-	ar rc $(NAME) $(SRCS:.c=.o)
+	@$(CC) -c $(SRCS) $(CFLAGS) -I $(HEADER)
+	@ar rc $(NAME) $(SRCS:.c=.o)
 
 clean:
-	rm -f $(SRCS:.c=.o)
+	@rm -f $(SRCS:.c=.o)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 

@@ -18,7 +18,7 @@ int	ft_putnbr_c(int n)
 	int		count;
 
 	i = 0;
-	count = 0;
+	count = 1;
 	if (n == MY_INT_MIN)
 	{
 		ft_putstr_c("-2147483648");
@@ -35,6 +35,6 @@ int	ft_putnbr_c(int n)
 		n %= 10;
 	}
 	if (n <= 9)
-		count += ft_putchar_c(n + '0');
+		ft_putchar_c(n + '0');
 	return (count);
 }
