@@ -6,9 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:56:47 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/22 06:59:16 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/01 15:49:44 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -17,10 +19,19 @@ int	ft_toupper(int c)
 	return (c);
 }
 
+void	ft_toupper2(char *c)
+{
+	if ('a' <= *c && *c <= 'z')
+		*c = *c - 32;
+}
+
 void	ft_strupper(char *s)
-{	
+{
+	size_t	i;
+
 	if (!s)
 		return ;
-	while (*s)
-		ft_toupper(*s++);
+	i = 0;
+	while (s[i++])
+		ft_toupper2(&s[i]);
 }

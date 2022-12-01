@@ -26,11 +26,10 @@ int		ft_putstr_c(char *s);
 int		ft_putnbr_c(int n);
 int		ft_putunbr_c(unsigned int n);
 void	ft_strrev(char *str);
-size_t	ft_len16(int n);
-char	*ft_dec_hexstr(uintptr_t n);
-int		ft_puthexlo_c(int n);;
-int		ft_puthexup_c(int n);
-int		ft_putptr_c(uintptr_t ptr);
+size_t	ft_len16(unsigned long long n);
+char	*ft_dec_hexstr(unsigned long long n);
+int		ft_puthex_c(unsigned long n, int c);
+int		ft_putptr_c(unsigned long ptr);
 int		return_null(void);
 
 #endif

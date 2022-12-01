@@ -1,17 +1,14 @@
 #include "ft_printf.h"
-#include "libft/libft.h"
 #include <stdio.h>
 #include <limits.h>
 
 int main(void)
 {
 	int	d;
-	int	e;
-	int	*test;
+	int e;
 
-	*test = 5;
-	//d = ft_printf("HELLO %p\n", test);
-	e = printf("HELLO %p\n", test);
+	d = ft_printf("myfun: %p\n", (void *)ULONG_MAX);
+	e = printf("orig.: %p\n", (void *)ULONG_MAX);
 	printf("%d and %d", d, e);
 	return (0);
 }

@@ -22,15 +22,13 @@ static int	ft_select_call(char c, va_list args)
 	else if (c == 's')
 		count = ft_putstr_c(va_arg(args, char *));
 	else if (c == 'p')
-		count = ft_putptr_c(va_arg(args, uintptr_t));
+		count = ft_putptr_c(va_arg(args, unsigned long));
 	else if (c == 'd' || c == 'i')
 		count = ft_putnbr_c(va_arg(args, int));
 	else if (c == 'u')
 		count = ft_putunbr_c(va_arg(args, unsigned int));
-	else if (c == 'x')
-		count = ft_puthexlo_c(va_arg(args, int));
-	else if (c == 'X')
-		count = ft_puthexup_c(va_arg(args, int));
+	else if (c == 'x' || c == 'X')
+		count = ft_puthex_c(va_arg(args, int), c);
 	else if (c == '%')
 		count = ft_putchar_c('%');
 	return (count);
@@ -51,8 +49,11 @@ int	ft_printf(const char *input, ...)
 	{
 		while (input[i] != '%' && input[i])
 			count += ft_putchar_c(input[i++]);
-		if (input[i++] == '%')
+		if (input[i] == '%')
+		{
+			i++;
 			count += ft_select_call(input[i++], args);
+		}
 	}
 	va_end(args);
 	return (count);

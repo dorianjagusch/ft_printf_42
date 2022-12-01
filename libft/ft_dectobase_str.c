@@ -6,7 +6,7 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:49:23 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/22 06:59:57 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/01 13:35:42 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	ft_strrev(char *str)
 	{
 		tmp = str[i];
 		str[i] = str[j];
-		str[j++] = str[i++];
+		str[j--] = str[i++];
 	}
 }
 

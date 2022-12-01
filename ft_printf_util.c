@@ -38,7 +38,7 @@ int	return_null(void)
 	return (6);
 }
 
-size_t	ft_len16(int n)
+size_t	ft_len16(unsigned long long n)
 {
 	size_t	len;
 
@@ -53,12 +53,12 @@ size_t	ft_len16(int n)
 	return (len);
 }
 
-char	*ft_dec_hexstr(uintptr_t n)
+char	*ft_dec_hexstr(unsigned long long n)
 {
-	char			*hex;
-	size_t			i;
-	unsigned int	remainder;
-	unsigned int	quotient;
+	char				*hex;
+	size_t				i;
+	unsigned long		remainder;
+	unsigned long long	quotient;
 
 	i = 0;
 	if (!n)

@@ -14,11 +14,11 @@
 
 int	ft_putstr_c(char *s)
 {
-	size_t	len;
+	int	len;
 
 	if (!s)
 		return (return_null());
 	len = ft_strlen(s);
 	write(1, s, len);
-	return ((int) len);
+	return (len);
 }
