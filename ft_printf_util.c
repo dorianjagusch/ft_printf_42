@@ -15,18 +15,20 @@
 void	ft_strrev(char *str)
 {
 	size_t	i;
-	size_t	j;
 	char	tmp;
+	size_t	len;
 
-	if (!*str || ft_strlen(str) < 2)
+	if (!str)
+		return ;
+	len = ft_strlen(str);
+	if (len-- < 2)
 		return ;
 	i = 0;
-	j = ft_strlen(str) - 1;
-	while (i < j)
+	while (i < len)
 	{
 		tmp = str[i];
-		str[i++] = str[j];
-		str[j++] = tmp;
+		str[i++] = str[len];
+		str[len--] = tmp;
 	}
 }
 
@@ -51,20 +53,17 @@ size_t	ft_len16(int n)
 	return (len);
 }
 
-char	*ft_dec_hexstr(int n)
+char	*ft_dec_hexstr(uintptr_t n)
 {
-	char	*hex;
-	size_t	i;
-	int		remainder;
-	int		quotient;
+	char			*hex;
+	size_t			i;
+	unsigned int	remainder;
+	unsigned int	quotient;
 
 	i = 0;
 	if (!n)
-	{
-		write(1, (void *)'0', 1);
 		return (NULL);
-	}
-	hex = (char *)malloc(sizeof(char) * ft_len16(n) + 1);
+	hex = (char *)malloc(sizeof(char) * (ft_len16(n) + 1));
 	if (!hex)
 		return (NULL);
 	quotient = n;

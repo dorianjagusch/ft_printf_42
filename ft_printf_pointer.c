@@ -12,19 +12,19 @@
 
 #include "ft_printf.h"
 
-int	ft_putptr_c(void *ptr)
+int	ft_putptr_c(uintptr_t ptr)
 {
-	uintptr_t	add;
 	char		*hex_add;
 	int			length;
 
-	add = (uintptr_t) ptr;
-	if (!add)
-		return (return_null());
-	hex_add = ft_dec_hexstr(add);
+	hex_add = NULL;
+	ft_putstr("0x");
+	if (!ptr)
+		return (ft_putchar_c('0') + 2);
+	hex_add = ft_dec_hexstr(ptr);
 	if (!hex_add)
 		return (return_null());
 	length = ft_putstr_c(hex_add);
 	free(hex_add);
-	return (length);
+	return (length + 2);
 }

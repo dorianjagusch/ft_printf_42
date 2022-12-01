@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
-
 
 static int	ft_select_call(char c, va_list args)
 {
@@ -24,7 +22,7 @@ static int	ft_select_call(char c, va_list args)
 	else if (c == 's')
 		count = ft_putstr_c(va_arg(args, char *));
 	else if (c == 'p')
-		count = ft_putptr_c(va_arg(args, void *));
+		count = ft_putptr_c(va_arg(args, uintptr_t));
 	else if (c == 'd' || c == 'i')
 		count = ft_putnbr_c(va_arg(args, int));
 	else if (c == 'u')
@@ -37,22 +35,6 @@ static int	ft_select_call(char c, va_list args)
 		count = ft_putchar_c('%');
 	return (count);
 }
-
-// static int	ft_count_args(const char *input)
-// {
-// 	int		n_args;
-// 	size_t	i;
-
-// 	n_args = 0;
-// 	i = 0;
-// 	while (input[i])
-// 	{
-// 		if (input[i] == '%' && input[i + 1] != '%')
-// 			n_args++;
-// 		i++;
-// 	}
-// 	return (n_args);
-// }
 
 int	ft_printf(const char *input, ...)
 {
@@ -68,14 +50,9 @@ int	ft_printf(const char *input, ...)
 	while (input[i])
 	{
 		while (input[i] != '%' && input[i])
-		{
 			count += ft_putchar_c(input[i++]);
-		}
-		if (input[i] == '%')
-		{
-			i++;
+		if (input[i++] == '%')
 			count += ft_select_call(input[i++], args);
-		}
 	}
 	va_end(args);
 	return (count);

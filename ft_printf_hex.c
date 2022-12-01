@@ -17,17 +17,14 @@ int	ft_puthexlo_c(int n)
 	char	*hex;
 	int		length;
 
-	if (!n)
-		length = write(1, (void *)'0', 1);
-	else 
-	{
-		hex = ft_dec_hexstr(n);
-		if (!hex)
-			return (return_null());
-		ft_strlower(hex);
-		length = ft_putstr_c(hex);
-		free(hex);
-	}
+	if (n == 0)
+		return (ft_putchar_c('0'));
+	hex = ft_dec_hexstr(n);
+	if (!hex)
+		return (return_null());
+	ft_strlower(hex);
+	length = ft_putstr_c(hex);
+	free(hex);
 	return (length);
 }
 
@@ -36,15 +33,12 @@ int	ft_puthexup_c(int n)
 	char	*hex;
 	int		length;
 
-	if (!n)
-		length = write(1, (void *)'0', 1);
-	else 
-	{
-		hex = ft_dec_hexstr(n);
-		if (!hex)
-			return (return_null());
-		length = ft_putstr_c(hex);
-		free(hex);
-	}
+	if (n == 0)
+		return (ft_putchar_c('0'));
+	hex = ft_dec_hexstr(n);
+	if (!hex)
+		return (return_null());
+	length = ft_putstr_c(hex);
+	free(hex);
 	return (length);
 }
