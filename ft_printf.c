@@ -31,7 +31,7 @@ static int	ft_select_call(char c, va_list args)
 		count = ft_puthex_c(va_arg(args, int), c);
 	else if (c == '%')
 		count = ft_putchar_c('%');
-	else 
+	else
 		count = ft_putchar_c(c);
 	return (count);
 }
