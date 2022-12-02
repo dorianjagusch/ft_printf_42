@@ -53,12 +53,12 @@ size_t	ft_len16(unsigned long long n)
 	return (len);
 }
 
-char	*ft_dec_hexstr(unsigned long long n)
+char	*ft_dec_hexstr(unsigned long n)
 {
 	char				*hex;
 	size_t				i;
 	unsigned long		remainder;
-	unsigned long long	quotient;
+	unsigned long		quotient;
 
 	i = 0;
 	if (!n)

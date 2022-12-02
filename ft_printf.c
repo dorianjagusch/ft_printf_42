@@ -31,6 +31,8 @@ static int	ft_select_call(char c, va_list args)
 		count = ft_puthex_c(va_arg(args, int), c);
 	else if (c == '%')
 		count = ft_putchar_c('%');
+	else 
+		count = ft_putchar_c(c);
 	return (count);
 }
 
@@ -41,7 +43,7 @@ int	ft_printf(const char *input, ...)
 	va_list	args;
 
 	if (!input || input[0] == '\0')
-		return (return_null());
+		return (0);
 	i = 0;
 	count = 0;
 	va_start(args, input);
