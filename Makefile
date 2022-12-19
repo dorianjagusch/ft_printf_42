@@ -16,7 +16,7 @@ CFLAGS = -Werror -Wall -Wextra
 
 NAME = libftprintf.a
 
-HEADER = printf.h
+HEADER = ft_printf.h
 
 PRINTF_FILES = ft_printf ft_printf_char \
 	ft_printf_hex ft_printf_int ft_printf_pointer \
@@ -32,6 +32,7 @@ all: $(NAME)
 
 $(NAME): $(LIBFT) $(PRINTF_SRCS:.c=.o)
 	@cp $(LIBFT) $@
+	$(CC) $(CFLAGS) -c $(PRINTF_SRCS) -I $(HEADER)
 	@ar rcs $(NAME) $(PRINTF_SRCS:.c=.o)
 
 $(LIBFT):
