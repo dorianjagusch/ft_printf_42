@@ -12,8 +12,8 @@ int main(void)
 	printf("########     INTEGER     ########\n");
 	printf("#################################\n\n");
 
-	ret_1 = printf("Integer 5: \t %b\n");
-	ret_2 = ft_printf("Integer 5: \t %b\n");
+	ret_1 = printf("Integer 5: \t %d\n", 5);
+	ret_2 = ft_printf("Integer 5: \t %d\n", 5);
 	printf("printf:\t\t%i\nft_printf:\t%i\n\n", ret_1, ret_2);
 
 	ret_1 = printf("Integer -5: \t %i\n", -5);
@@ -276,6 +276,21 @@ int main(void)
 	ret_2 = ft_printf("This is a %s and a char %c, a decimal %d and integer %i, and address of a char %p, \
 	and the hexadicmal representation of the same number as before in lower %x and upper case %X and a percentage %%\n\n", 
 	str, c2, integer, integer, p, integer, integer);
+	printf("printf:\t\t%d\nft_printf:\t%d\n\n", ret_1, ret_2);
+
+	ret_1 = printf("This is a c followed by a string %cs and, a decimal %d and integer %i, and address of a char %p, \
+	and the hexadicmal representation of the same number as before in lower %x and upper case %X and a percentage %%\n\n", 
+	c2, integer, integer, p, integer, integer);
+	ret_2 = ft_printf("This is a c followed by a string %cs and, a decimal %d and integer %i, and address of a char %p, \
+	and the hexadicmal representation of the same number as before in lower %x and upper case %X and a percentage %%\n\n", c2, integer, integer, p, integer, integer);
+	printf("printf:\t\t%d\nft_printf:\t%d\n\n", ret_1, ret_2);
+
+	printf("#################################\n");
+	printf("##########  ODD FLAGS  ##########\n");
+	printf("#################################\n");
+
+	ret_1 = printf("This is a P %P and a b %b, a g %g and j %j, and an e %e\n");
+	ret_2 = ft_printf("This is a P %P and a b %b, a g %g and j %j, and an e %e\n");
 	printf("printf:\t\t%d\nft_printf:\t%d\n\n", ret_1, ret_2);
 
 	return (0);
