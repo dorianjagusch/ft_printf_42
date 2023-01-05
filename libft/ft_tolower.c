@@ -6,11 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:04:15 by djagusch          #+#    #+#             */
-/*   Updated: 2022/12/01 16:26:59 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/24 05:08:57 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:25:44 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/17 14:11:50 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/24 05:08:55 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

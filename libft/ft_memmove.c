@@ -6,11 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 16:49:15 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/08 12:57:04 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/24 05:08:55 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 static void	ft_move(void **dst, const void **src, size_t len, int ind)
 {

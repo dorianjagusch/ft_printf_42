@@ -6,11 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 19:00:03 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/17 16:31:29 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/24 05:08:55 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 size_t	ft_max(size_t a, size_t b)
 {

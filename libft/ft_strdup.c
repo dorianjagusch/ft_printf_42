@@ -6,11 +6,11 @@
 /*   By: djagusch <djagusch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 18:32:39 by djagusch          #+#    #+#             */
-/*   Updated: 2022/11/06 15:50:25 by djagusch         ###   ########.fr       */
+/*   Updated: 2022/12/24 05:08:57 by djagusch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/libft.h"
 
 char	*ft_strdup(const char *s1)
 {
