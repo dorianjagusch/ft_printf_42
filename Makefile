@@ -12,11 +12,14 @@
 
 CC = cc
 
-CFLAGS = -Werror -Wall -Wextra
+CFLAGS = -Werror -Wall -Wextra -I$(INC)
 
 NAME = libftprintf.a
 
-HEADER = ft_printf.h libft/include/libft.h
+HEADER := ft_printf.h libft.h
+INC = include/
+
+HEADER := $(addprefix $(INC), $(HEADER))
 
 PRINTF_FILES = ft_printf ft_printf_char \
 	ft_printf_hex ft_printf_int ft_printf_pointer \
@@ -30,13 +33,15 @@ LIBFT = $(LIBFT_DIR)libft.a
 
 all: $(NAME)
 
-$(NAME): $(LIBFT) $(PRINTF_SRCS:.c=.o)
-	@cp $(LIBFT) $@
-	$(CC) $(CFLAGS) -c $(PRINTF_SRCS) -I $(HEADER)
+print:
+	echo $(HEADER) $(PRINTF_SRCS)
+
+$(NAME): $(LIBFT) $(PRINTF_SRCS:.c=.o) $(HEADER)
+	$(CC) $(CFLAGS) -c $(PRINTF_SRCS)
 	@ar rcs $(NAME) $(PRINTF_SRCS:.c=.o)
 
 $(LIBFT):
-	@cd $(LIBFT_DIR) && $(MAKE)
+	$(MAKE) -C libft
 
 clean:
 	@rm -f $(PRINTF_SRCS:.c=.o)

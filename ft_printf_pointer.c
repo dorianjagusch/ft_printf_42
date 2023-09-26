@@ -18,7 +18,7 @@ int	ft_putptr_c(unsigned long long ptr)
 	int			length;
 
 	ft_putstr("0x");
-	if (!ptr)
+	if ( !ptr )
 		return (ft_putchar_c('0') + 2);
 	hex_add = ft_dec_hexstr(ptr);
 	if (!hex_add)

@@ -14,11 +14,7 @@
 
 int	ft_putstr_c(char *s)
 {
-	int	len;
-
 	if (!s)
 		return (return_null());
-	len = ft_strlen(s);
-	write(1, s, len);
-	return (len);
+	return ( write(1, s, ft_strlen(s)) );
 }

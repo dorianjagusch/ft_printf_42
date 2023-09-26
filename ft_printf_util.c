@@ -14,8 +14,7 @@
 
 int	return_null(void)
 {
-	ft_putstr_c("(null)");
-	return (6);
+	return (ft_putstr_c("(null)"));
 }
 
 size_t	ft_len16(unsigned long long n)
