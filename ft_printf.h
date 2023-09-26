@@ -16,8 +16,15 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft/libft.h"
+# include "libft.h"
 
-
+int		return_null(void);
+char	*ft_dec_hexstr(unsigned long n);
+int		ft_putunbr_c(unsigned int n);
+int		ft_putstr_c(char *s);
+int		ft_putptr_c(unsigned long long ptr);
+int		ft_putnbr_c(int n);
+int		ft_puthex_c(unsigned int n, int c);
+int		ft_putchar_c(int c);
 
 #endif

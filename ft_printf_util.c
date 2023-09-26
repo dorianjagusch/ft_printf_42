@@ -12,26 +12,6 @@
 
 #include "ft_printf.h"
 
-void	ft_strrev(char *str)
-{
-	size_t	i;
-	char	tmp;
-	size_t	len;
-
-	if (!str)
-		return ;
-	len = ft_strlen(str);
-	if (len-- < 2)
-		return ;
-	i = 0;
-	while (i < len)
-	{
-		tmp = str[i];
-		str[i++] = str[len];
-		str[len--] = tmp;
-	}
-}
-
 int	return_null(void)
 {
 	ft_putstr_c("(null)");

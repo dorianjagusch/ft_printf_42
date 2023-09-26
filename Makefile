@@ -16,7 +16,7 @@ CFLAGS = -Werror -Wall -Wextra
 
 NAME = libftprintf.a
 
-HEADER = ft_printf.h
+HEADER = ft_printf.h libft/include/libft.h
 
 PRINTF_FILES = ft_printf ft_printf_char \
 	ft_printf_hex ft_printf_int ft_printf_pointer \
