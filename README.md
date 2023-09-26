@@ -4,7 +4,7 @@ Do you hate using write as the only allowed method of writing to the terminal or
 
 ## Description
 
-With this project we extended our standard library clone by writing our own (simplified) printf with the flags `%c`, `%s`, `%d`, `%p`, `%u`, `%x` and `%%`.
+With this project we extended our standard library clone by writing our own (simplified) printf with the flags `%c`, `%s`, `%d`, `%i`, `%p`, `%u`, `%x`, `%x` and `%%`.
 
 ## Table of Contents
 
@@ -44,6 +44,13 @@ INC = [your header files]
 $(NAME): $(SRC) $(INC)
     gcc -I$(INC) $< -o $@ -Lft_printf -lftprintf
 }
+```
+
+In the folder there is a test file with unit tests for 'ft_printf', which can be executed like so after compilation:
+
+```
+  cc -I$(INC) my_printf_tests.c -o test -Lft_printf -lftprintf
+  ./test
 ```
 
 ## Sidenote 
